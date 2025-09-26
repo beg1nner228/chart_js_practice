@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chart_js_practice</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Добавить расходы</a></li>
+          <li><a href="./front-page.html">Диаграмма ваших расходов</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="app">
+      <form class="expense-form">
+        <h2>Добавить расходы</h2>
+
+        <div class="form-group">
+          <label for="amount">Сумма</label>
+          <input type="number" id="amount" name="amount" placeholder="Введите сумму" required>
+        </div>
+
+        <div class="form-group">
+          <label for="type">Категория</label>
+          <select id="type" name="type" required>
+            <option value="">Выберите категорию</option>
+            <option value="food">Еда</option>
+            <option value="transport">Транспорт</option>
+            <option value="shopping">Покупки</option>
+            <option value="entertainment">Развлечения</option>
+            <option value="other">Другое</option>
+          </select>
+        </div>
+
+        <button type="submit" style="margin-bottom: 30px;">Add</button>
+        <button type="submit" id="resetBtn">Reset</button>
+      </form>
+        <div class="chart-container">
+          <canvas id="myViteChart"></canvas> 
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
